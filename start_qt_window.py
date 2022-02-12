@@ -1,9 +1,8 @@
 import sys
-
 from PyQt5 import uic
 from PyQt5.QtWidgets import QApplication, QWidget
-
 from get_image import get_image
+from show_image import ImageWindow
 
 
 class HelloScreen(QWidget):
@@ -23,7 +22,8 @@ class HelloScreen(QWidget):
         ll = ",".join(map(str, [longitude, latitude]))
         scale = ",".join(map(str, (scale,) * 2))
 
-        get_image(ll, scale)
+        self.map_window = ImageWindow(get_image(ll, scale))
+        self.map_window.show()
 
 
 sys._excepthook = sys.excepthook

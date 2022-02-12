@@ -1,5 +1,5 @@
 import requests
-from PIL import Image
+from PIL import Image, ImageQt
 from io import BytesIO
 
 
@@ -13,7 +13,9 @@ def get_image(ll, spn, map_type="map", add_params=None):
         map_params.update(add_params)
     map_api_server = "http://static-maps.yandex.ru/1.x/"
     response = requests.get(map_api_server, params=map_params)
-    return Image.open(BytesIO(response.content)).show()
+    image = Image.open(BytesIO(response.content))
+    image_qt = ImageQt.ImageQt(image)
+    return image_qt
 
 
 if __name__ == '__main__':
