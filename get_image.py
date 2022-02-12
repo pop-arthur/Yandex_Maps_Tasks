@@ -14,8 +14,10 @@ def get_image(ll, spn, map_type="map", add_params=None):
     map_api_server = "http://static-maps.yandex.ru/1.x/"
     response = requests.get(map_api_server, params=map_params)
     image = Image.open(BytesIO(response.content))
-    image_qt = ImageQt.ImageQt(image)
-    return image_qt
+    file_name = 'map.png'
+    image.save(file_name)
+    #image_qt = ImageQt.ImageQt(image)
+    return file_name
 
 
 if __name__ == '__main__':

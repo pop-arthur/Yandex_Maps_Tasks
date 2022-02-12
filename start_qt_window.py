@@ -41,3 +41,4 @@ def start_application():
     app = QApplication(sys.argv)
     ex = HelloScreen()
     sys.exit(app.exec())
+
