@@ -22,7 +22,7 @@ class HelloScreen(QWidget):
         ll = ",".join(map(str, [longitude, latitude]))
         scale = ",".join(map(str, (scale,) * 2))
 
-        self.map_window = ImageWindow(get_image(ll, scale))
+        self.map_window = ImageWindow(get_image(ll, scale), ll, scale)
         self.map_window.show()
 
 
