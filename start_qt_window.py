@@ -1,10 +1,7 @@
 import sys
 
-from PyQt5 import QtGui, uic, QtMultimedia, QtCore
-from PyQt5.QtCore import *
-from PyQt5.QtMultimedia import *
-from PyQt5.QtGui import QPixmap
-from PyQt5.QtWidgets import QApplication, QWidget, QDialog, QTableWidgetItem
+from PyQt5 import uic
+from PyQt5.QtWidgets import QApplication, QWidget
 
 from get_image import get_image
 
