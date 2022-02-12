@@ -4,10 +4,10 @@ import sys
 import requests
 from PyQt5.QtGui import QPixmap
 from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QApplication, QWidget, QLabel
+from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QRadioButton
 from get_image import get_image
 
-SCREEN_SIZE = [600, 450]
+SCREEN_SIZE = [600, 550]
 
 
 
@@ -30,6 +30,17 @@ class ImageWindow(QWidget):
         self.image.move(0, 0)
         self.image.resize(600, 450)
         self.image.setPixmap(self.pixmap)
+
+        self.scheme_button = QRadioButton(self, "схема")
+        self.scheme_button.move(450, 0)
+        self.scheme_button.resize(200, 100)
+        self.satellite_button = QRadioButton(self, "спутник")
+        self.satellite_button.move(450, 200)
+        self.satellite_button.resize(200, 100)
+        self.hybrid_button = QRadioButton(self, "гибрид")
+        self.hybrid_button.move(450, 400)
+        self.hybrid_button.resize(200, 100)
+
 
     def keyPressEvent(self, event):
         if event.key() == Qt.Key_PageUp:
