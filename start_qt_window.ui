@@ -92,7 +92,11 @@
      </widget>
     </item>
     <item row="2" column="1">
-     <widget class="QLineEdit" name="latitude"/>
+     <widget class="QLineEdit" name="latitude">
+      <property name="text">
+       <string>55.753630</string>
+      </property>
+     </widget>
     </item>
     <item row="3" column="1">
      <spacer name="verticalSpacer_2">
@@ -120,10 +124,18 @@
      </widget>
     </item>
     <item row="4" column="1">
-     <widget class="QLineEdit" name="scale"/>
+     <widget class="QLineEdit" name="scale">
+      <property name="text">
+       <string>0.002</string>
+      </property>
+     </widget>
     </item>
     <item row="0" column="1">
-     <widget class="QLineEdit" name="longitude"/>
+     <widget class="QLineEdit" name="longitude">
+      <property name="text">
+       <string>37.620070</string>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>
