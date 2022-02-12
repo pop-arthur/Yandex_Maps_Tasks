@@ -10,6 +10,7 @@ class HelloScreen(QWidget):
     def __init__(self):
         super(HelloScreen, self).__init__()
         uic.loadUi("start_qt_window.ui", self)
+        self.setWindowTitle("WEB. Решение задач на API Яндекс.Карт")
         self.show()
 
         self.start_button.clicked.connect(self.get_data)
