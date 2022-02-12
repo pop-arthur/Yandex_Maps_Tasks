@@ -38,7 +38,8 @@ def exception_hook(exctype, value, traceback):
 
 sys.excepthook = exception_hook
 
-if __name__ == '__main__':
+
+def start_application():
     app = QApplication(sys.argv)
     ex = HelloScreen()
     sys.exit(app.exec())
