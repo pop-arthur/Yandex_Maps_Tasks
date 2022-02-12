@@ -36,6 +36,14 @@ class ImageWindow(QWidget):
             self.scale *= 2
         if event.key() == Qt.Key_PageDown:
             self.scale /= 2
+        if event.key() == Qt.Key_Left:
+            self.longitude -= 1
+        if event.key() == Qt.Key_Right:
+            self.longitude += 1
+        if event.key() == Qt.Key_Up:
+            self.latitude += 1
+        if event.key() == Qt.Key_Down:
+            self.latitude -= 1
         ll = ",".join(map(str, [self.longitude, self.latitude]))
         scale = ",".join(map(str, (self.scale,) * 2))
         self.pixmap = QPixmap.fromImage(get_image(ll, scale))
